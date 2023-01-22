@@ -20,7 +20,7 @@ bigImg.show()
   function createImageMarkup(items) {
       return items.map( item =>
       `<div class="gallery__item"><a class="gallery__link" href="${item.original}"><img class="gallery__image"
-      src="${preview}" data-sourse="${item.original}" alt="${description}"/></a></div>`).join("")
+      src="${item.preview}" data-sourse="${item.original}" alt="${item.description}"/></a></div>`).join("")
   }
 galeryListOfImagesEl.innerHTML = imageItemsMarkup;
 
