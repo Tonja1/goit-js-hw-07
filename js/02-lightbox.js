@@ -9,7 +9,7 @@ function newGellery(image) {
         .join("");
 }
 
-galeryEl.insertAdjacentHTML("beforeend", newGellery(gelleryItems));
+galleryEl.insertAdjacentHTML("beforeend", newGellery(gelleryItems));
 
 new Simplelightbox(".gallery a", {
     captiosData: "alt",

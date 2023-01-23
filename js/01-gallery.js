@@ -20,7 +20,8 @@ galeryListOfImagesEl.innerHTML = imageItemsMarkup;
 
 const url = returnUrlOfBiggestImg
 
-function returnUrlOfBiggestImg(evt) {
+returnUrlOfBiggestImg.addEventListener('click', onImgClick);
+function onImgClick(evt) {
   if (evt.target.nodeName !== "IMG") {
     return
   }
