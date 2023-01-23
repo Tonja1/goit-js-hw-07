@@ -8,6 +8,8 @@ function onClick(evt) {
   if (evt.target.nodeName !== "IMG") {
     return;
   }
+  const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
+bigImg.show();
 };
 
 const imageItemsMarkup = createImageMarkup(galleryItems);
@@ -20,8 +22,5 @@ galleryImages.innerHTML = imageItemsMarkup;
       src="${preview}" data-sourse="${original}" alt="${description}"/></a></div>`)
       .join("");
 };
-  
-const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
-bigImg.show();
 console.log(galleryItems);
 
