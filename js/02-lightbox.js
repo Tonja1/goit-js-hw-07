@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 const galeryEl = document.querySelector('.gallery');
 function newGellery(image) {
     return image
-        .map(({ preview, original, description }) => {
+        .map(({preview, original, description}) => {
             return `<a class="gallery__item" href="${original}"><img class="gallery__image" src="${preview}" alt="${description}" /></a>`
         })
         .join("");
@@ -11,8 +11,8 @@ function newGellery(image) {
 
 galleryEl.insertAdjacentHTML("beforeend", newGellery(gelleryItems));
 
-new Simplelightbox(".gallery a", {
-    captiosData: "alt",
+new Simplelightbox('.gallery', {
+    captinosData: "alt",
     captionsDelay: 250,
 });
 
