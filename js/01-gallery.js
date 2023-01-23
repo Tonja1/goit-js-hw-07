@@ -16,7 +16,7 @@ function onClick(evt) {
       src="${preview}" data-sourse="${original}" alt="${description}"/></a></div>`)
       .join("");
   }
-galeryListOfImagesEl.innerHTML = createImageMarkup(galleryItems);
+galeryListOfImagesEl.innerHTML = imageItemsMarkup;
 
 galeryListOfImagesEl.addEventListener(click, oneImgClick);
 function oneImgClick(evt) {
