@@ -1,10 +1,10 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-const galeryListOfImagesEl = document.querySelector('.gallery');
+const galleryListOfImagesEl = document.querySelector('.gallery');
 const imageItemsMarkup = createImageMarkup(galleryItems);
 
-galeryListOfImagesEl.addEventListener('click', onClick);
+galleryListOfImagesEl.addEventListener('click', onClick);
 function onClick(evt) {
   evt.preventDefault();
 }
@@ -16,7 +16,7 @@ function onClick(evt) {
       src="${preview}" data-sourse="${original}" alt="${description}"/></a></div>`)
       .join("");
   }
-galeryListOfImagesEl.innerHTML = imageItemsMarkup;
+galleryListOfImagesEl.innerHTML = imageItemsMarkup;
 
 const url = returnUrlOfBiggestImg
 
