@@ -18,16 +18,15 @@ function onClick(evt) {
   }
 galeryListOfImagesEl.innerHTML = imageItemsMarkup;
 
-galeryListOfImagesEl.addEventListener(click, oneImgClick);
-function oneImgClick(evt) {
+const url = returnUrlOfBiggestImg
+
+function returnUrlOfBiggestImg(evt) {
   if (evt.target.nodeName !== "IMG") {
-    return;
+    return
   }
 }
 
-const bigImg = basicLightbox.create(`
-     <img src="${evt.target.dataset.source}" width="800" height="600">
-  `);
+const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
 bigImg.show();
 console.log(galleryItems);
 
