@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-const galeryEl = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery');
 function newGellery(image) {
     return image
         .map(({preview, original, description}) => {
@@ -9,9 +9,9 @@ function newGellery(image) {
         .join("");
 }
 
-galleryEl.insertAdjacentHTML("beforeend", newGellery(gelleryItems));
+galleryEl.insertAdjacentHTML("beforeend", newGellery(galleryItems));
 
-new Simplelightbox('.gallery', {
+new SimpleLightbox('.gallery a', {
     captinosData: "alt",
     captionsDelay: 250,
 });

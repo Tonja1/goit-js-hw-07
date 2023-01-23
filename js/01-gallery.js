@@ -1,16 +1,17 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
+const galleryImages = document.querySelector('.gallery');
 
-const galleryListOfImagesEl = document.querySelector('.gallery');
-const imageItemsMarkup = createImageMarkup(galleryItems);
-
-galleryListOfImagesEl.addEventListener('click', onClick);
+galleryImages.addEventListener('click', onClick);
 function onClick(evt) {
   evt.preventDefault();
   if (evt.target.nodeName !== "IMG") {
-    return
+    return;
   }
-}
+};
+
+const imageItemsMarkup = createImageMarkup(galleryItems);
+galleryImages.innerHTML = imageItemsMarkup;
 
   function createImageMarkup(galleryItems) {
     return galleryItems
@@ -18,18 +19,8 @@ function onClick(evt) {
         `<div class="gallery__item"><a class="gallery__link" href="${original}"><img class="gallery__image"
       src="${preview}" data-sourse="${original}" alt="${description}"/></a></div>`)
       .join("");
-  }
-galleryListOfImagesEl.innerHTML = imageItemsMarkup;
-
-// const url = "returnUrlOfBiggestImg"
-
-// returnUrlOfBiggestImg.addEventListener('click', onImgClick);
-// function onImgClick(evt) {
-//   if (evt.target.nodeName !== "IMG") {
-//     return
-//   }
-// }
-
+};
+  
 const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
 bigImg.show();
 console.log(galleryItems);
