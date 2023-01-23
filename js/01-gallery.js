@@ -7,6 +7,9 @@ const imageItemsMarkup = createImageMarkup(galleryItems);
 galleryListOfImagesEl.addEventListener('click', onClick);
 function onClick(evt) {
   evt.preventDefault();
+  if (evt.target.nodeName !== "IMG") {
+    return
+  }
 }
 
   function createImageMarkup(galleryItems) {
@@ -18,14 +21,14 @@ function onClick(evt) {
   }
 galleryListOfImagesEl.innerHTML = imageItemsMarkup;
 
-const url = returnUrlOfBiggestImg
+// const url = "returnUrlOfBiggestImg"
 
-returnUrlOfBiggestImg.addEventListener('click', onImgClick);
-function onImgClick(evt) {
-  if (evt.target.nodeName !== "IMG") {
-    return
-  }
-}
+// returnUrlOfBiggestImg.addEventListener('click', onImgClick);
+// function onImgClick(evt) {
+//   if (evt.target.nodeName !== "IMG") {
+//     return
+//   }
+// }
 
 const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
 bigImg.show();
