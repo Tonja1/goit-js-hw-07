@@ -22,5 +22,13 @@ galleryImages.innerHTML = imageItemsMarkup;
       src="${preview}" data-sourse="${original}" alt="${description}"/></a></div>`)
       .join("");
 };
+
+galleryImages.addEventListener("keydown", (evt) => {
+      
+        if (evt.code === 'Escape') {
+          bigImg.close();
+        }
+      });
+    
 console.log(galleryItems);
 
