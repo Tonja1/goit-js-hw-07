@@ -7,7 +7,7 @@ galleryImages.addEventListener('click', (evt) => {
 if (evt.target.nodeName !== "IMG") {
   return;
 }
-const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
+const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.sourse}" width="800" height="600">`);
   bigImg.show();
 
 });
