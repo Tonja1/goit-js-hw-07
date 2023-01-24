@@ -2,19 +2,15 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 const galleryImages = document.querySelector('.gallery');
 
-galleryImages.addEventListener('click', onClick);
-function onClick(evt) {
+galleryImages.addEventListener('click', (evt) => {
   evt.preventDefault();
-};
-galleryImages.addEventListener('click', onImageClick);
-function onImageClick(evt) {
 if (evt.target.nodeName !== "IMG") {
   return;
 }
 const bigImg = basicLightbox.create(`<img src="${evt.target.dataset.source}" width="800" height="600">`);
   bigImg.show();
-}
 
+});
 
 const imageItemsMarkup = createImageMarkup(galleryItems);
 galleryImages.innerHTML = imageItemsMarkup;
